@@ -18,7 +18,8 @@
    --icon-social-color:  rgba(175, 177, 184, 1);
    --icon-address-link: rgba(255, 255, 255, 1);
    --icon-address-list: rgba(255, 255, 255, 0.1);
-
+--shadow-color-hover: rgba(0, 0, 0, 0.12);
+--shadow-card-hover: rgba(0, 0, 0, 0.16);
 }
 
 body{
@@ -119,12 +120,14 @@ align-items: center;
 .current{
     color: var(--logo-accent-color);
 }
+
 .icon-nav{
     margin-right: 10px;
+   
 }
 .email{
   margin-right:30px ;  
-   color: var(--secondary-main-color);
+   fill: var(--secondary-main-color);
    
 }
 .email:hover{
@@ -133,7 +136,7 @@ align-items: center;
    }
 
 .phone{
-color: var(--secondary-main-color);
+fill: var(--secondary-main-color);
    }
 .phone:hover{
    
@@ -250,9 +253,11 @@ margin-left: 0;
 .list-items:last-child{
     margin-right: 0;
 }
-.job-list:not(:last-child){
-    margin-right: 30px;
+.our-team-icon{
+padding-top: 30px;
+padding-bottom: 30px;
 }
+
 .job-list{
    
 flex-wrap: wrap;
@@ -327,10 +332,9 @@ line-height: 1.16;
 }
 .social-list{
     display: flex;
-    justify-content:space-around;
-    margin-left: 32px;
-    margin-right: 32px;
-    margin-bottom: 30px;
+   justify-content: center;
+   gap: 10px;
+    
 }
 .social-link{
 align-items: center;
@@ -421,7 +425,7 @@ margin-right: 30px;
 
 .team-titel{
    
-    margin-top: 30px;
+    
     font-weight: 500;
     font-size: 16px;
     line-height: 1.12;
@@ -553,6 +557,7 @@ margin-left: 8px;
 
 
 .button-list{
+    
 min-width: 73px;
 border-radius: 4px;  
 margin-right:8px;
@@ -570,6 +575,7 @@ line-height: 1.6;
 }
 .button-list:hover,
 .button-list:focus{
+    box-shadow: 0px 2px var(--shadow-color-hover);
     color:var(--hero-text-color) ;
     background-color: var(--logo-accent-color);  
 }
@@ -587,7 +593,10 @@ margin-bottom: 0;
     border-bottom: 25px;
     border: 1px solid var(--list-names-border);
 }
-
+.project-card:hover,
+.project-card:focus{
+    box-shadow: 1px 4px var(--shadow-card-hover); 
+}
 .project-card{
  margin-bottom: 30px;
 }
